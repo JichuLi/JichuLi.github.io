@@ -1,0 +1,54 @@
+# jemdoc: menu{MENU.txt}{index.html}
+=Jichu Li (李继初)
+
+~~~
+{}{img_left}{images/photo.jpg}{alt text}{275}{227}
+
+*About Me*\n
+
+Welcome to my homepage!
+
+I’m Jichu Li, currently an undergraduate student in the Honors Talent Program in Statistics and Data Science at [https://www.ruc.edu.cn/ Renmin University of China]. I'm also a visiting student at [https://www.ttic.edu/ Toyota Technological Institute at Chicago], hosted by [https://zhiyuanli.ttic.edu/ Prof. Zhiyuan Li]. 
+During my research journey, I had the fortune to work with [https://difanzou.github.io/ Prof. Difan Zou] on learning theory at The University of Hong Kong and [https://zhoufeng6288.github.io/index.html Prof. Feng Zhou] on multimodal time-series modeling at Renmin University of China.
+
+*Research Interests*\n
+My research interests lie at the intersection of machine learning theory and optimization. I am dedicated to building a rigorous theoretical understanding of modern optimization algorithms in deep learning, analyzing their convergence, implicit bias, and generalization. 
+At the same time, I am interested in applying these theoretical insights to the design and analysis of large language models (LLMs/MLLMs), including LLM-based approaches for modeling complex sequential and event-based data.
+
+Feel free to email me if you’d like to connect!
+
+*Contact Information*\n
+
+Email: lijichu52 [at] gmail [dot] com
+
+\[[https://scholar.google.com/citations?user=hY3QvysAAAAJ&hl=en Google Scholar]\] \[[https://github.com/JichuLi GitHub]\] \[[files/CV_Jichu.pdf CV]\]
+~~~
+
+== Publications ({{*}} equal contribution)
+
+
+- [Learning with Synthetic Data via SGD in High-Dimensional Linear Regression] \n 
+*Jichu Li*, Difan Zou
+/In submission/ \n
+/ICML Workshop on High-dimensional Learning Dynamics (HiLD 2026)/\n
+
+- [https://arxiv.org/abs/2602.11557 The Implicit Bias of Steepest Descent with Mini-batch Stochastic Gradient] \n 
+*Jichu Li*, Xuan Tang, Difan Zou \n 
+/International Conference on Machine Learning (ICML) 2026/ \n
+
+- [https://arxiv.org/abs/2510.21314 A Convergence Analysis of Adaptive Optimizers under Floating-point Quantization] \n 
+Xuan Tang{{*}}, *Jichu Li{{*}}*, Difan Zou \n 
+/International Conference on Learning Representations (ICLR) 2026/ \n
+
+- [https://arxiv.org/abs/2602.01125 Long-range Modeling and Processing of Multimodal Event Sequences] \n 
+*Jichu Li{{*}}*, Yilun Zhong{{*}}, Zhiting Li, Feng Zhou, Quyu Kong \n 
+/International Conference on Learning Representations (ICLR) 2026/ \n
+
+
+- [https://arxiv.org/abs/2505.18411 DanmakuTPPBench: A Multi-modal Benchmark for Temporal Point Process Modeling and Understanding]\n 
+Yue Jiang, *Jichu Li*, Yang Liu, Dingkang Yang, Feng Zhou, Quyu Kong \n 
+/Neural Information Processing Systems (NeurIPS) 2025/ \n
+
+
+
+

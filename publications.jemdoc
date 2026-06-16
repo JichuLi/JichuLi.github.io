@@ -1,0 +1,90 @@
+# jemdoc: menu{MENU.txt}{Publications.html}
+=Publications
+
+Authors with \* contributed equally.
+
+== 2026
+
+- [https://arxiv.org/abs/2606.09052 INFUSER: Influence-Guided Self-Evolution Improves Reasoning] \n 
+Siyu Chen, *Miao Lu*, Beining Wu, Heejune Sheen, Fengzhuo Zhang, Shuangning Li, Zhiyuan Li, Jose Blanchet, Tianhao Wang, Zhuoran Yang \n
+/arXiv preprint, Jun 2026/ \[[ArXiv_INFUSER.pdf *PDF*]\] \[[https://github.com/FFishy-git/INFUSER *Code*]\] \n
+
+- [https://miaolu3.github.io/publications.html A Few Teacher Steps Go a Long Way: Cost-Efficient On-Policy Data Augmentation for Agent Post-Training] \n 
+Junze Ye\*, Jiayi Cheng\*, *Miao Lu\**, Michal Mankowski, Jose Blanchet, Mohsen Bayati \n
+/ICML Workshop on RL from World Feedback (RLxF) 2026/  \n
+
+- [https://miaolu3.github.io/publications.html Towards Understanding Momemtum Acceleration in River-Valley Loss Landscape]\n
+*Miao Lu*, Zeyu Bian, Kaiyue Wen, Beining Wu, Siyu Chen, Tianhao Wang, Zhiyuan Li \n
+/ICML Workshop on High-dimensional Learning Dynamics (HiLD) 2026/ *Spotlight* \n
+
+- [https://arxiv.org/abs/2510.11967 Scaling Long-Horizon LLM Agent via Context Folding] \n 
+Weiwei Sun, *Miao Lu*, Zhan Ling, Kang Liu, Xuesong Yao, Yiming Yang, Jiecao Chen \n 
+/International Conference on Machine Learning (ICML) 2026/  \[[ArXiv_FoldGRPO.pdf *PDF*]\] \[[https://github.com/sunnweiwei/FoldAgent *Code*]\] \n
+
+- [https://arxiv.org/abs/2508.07571 Towards Theoretical Understanding of Transformer Test-Time Computing: Investigation on In-Context Linear Regression]\n
+Xingwu Chen, *Miao Lu*, Beining Wu, Difan Zou \n
+/NeurIPS Workshop on Foundations of Reasoning in Language Models (FoRLM) 2025/  \n 
+/International Conference on Machine Learning (ICML) 2026/  \[[ArXiv_TTC.pdf *PDF*]\] \n
+
+- [https://arxiv.org/abs/2602.10696 Robust Assortment Optimization from Observational Data]\n
+*Miao Lu*, Yuxuan Han, Han Zhong, Zhengyuan Zhou, Jose Blanchet \n
+/arXiv preprint, Feb 2026/ \[[ArXiv_PR2B.pdf *PDF*]\] \n
+
+- [https://arxiv.org/abs/2510.06727 Beyond the Context Window: Scaling Agentic RL via End-to-end Optimized Context Compression] \n 
+*Miao Lu*, Weiwei Sun, Weihua Du, Zhan Ling, Xuesong Yao, Kang Liu, Jiecao Chen \n 
+/Association for Computational Linguistics (ACL) 2026/  \[[ArXiv_SUPO.pdf *PDF*]\] \n
+
+== Before 2026
+
+- [https://arxiv.org/abs/2502.06777  Learning an Optimal Assortment Policy under Observational Data]\n
+Yuxuan Han, Han Zhong, *Miao Lu*, Jose Blanchet, Zhengyuan Zhou \n
+/Under review in Management Science (MS)/ \n
+/arXiv preprint, Feb 2025/ \[[ArXiv_PRB.pdf *PDF*]\] \[[Robust_Assortment_Optimization_Slides.pdf *Slides*]\] \n
+
+- [https://openreview.net/forum?id=is4nCVkSFA Can Neural Networks Achieve Optimal Computational-Statistical Tradeoff? An Analysis on Single-Index Model]\n
+Siyu Chen\*, Beining Wu\*, *Miao Lu*, Zhuoran Yang, Tianhao Wang \n
+/NeurIPS Workshop on Mathematics of Modern Machine Learning (M3L) 2024/ *Oral*  \n 
+/International Conference on Learning Representations (ICLR) 2025/ *Oral* \[[ICLR2025SingleIndex.pdf *PDF*]\] \[[M3L_slides.pdf *Slides*]\] \n
+
+
+- [https://arxiv.org/abs/2405.16436 Provably Mitigating Overoptimization in RLHF: Your SFT Loss is Implicitly an Adversarial Regularizer]\n 
+Zhihan Liu\*, *Miao Lu\**, Shenao Zhang, Boyi Liu, Hongyi Guo, Yingxiang Yang, Jose Blanchet, Zhaoran Wang \n 
+/ICML Workshop on Aligning Reinforcement Learning Experimentalists and Theorists (ARLET) 2024/ \n
+/Neural Information Processing Systems (NeurIPS) 2024/ \[[ArXiv_RPO.pdf *PDF*]\] \[[https://github.com/YSLIU627/Regularized-Preference-Optimization *Code*]\] \[[Poster_RPO.pdf *Poster*]\]\n
+
+- [https://arxiv.org/abs/2404.03578 Distributionally Robust Reinforcement Learning with Interactive Data Collection: Fundamental Hardness and Near-Optimal Algorithm]\n 
+*Miao Lu\**, Han Zhong\*, Tong Zhang, Jose Blanchet \n 
+/ICML Workshop on Aligning Reinforcement Learning Experimentalists and Theorists (ARLET) 2024/ \n
+/Neural Information Processing Systems (NeurIPS) 2024/ \[[ArXiv_DRRL_Interactive.pdf *PDF*]\]  \[[NeurIPS2024IDCSlides.pdf *Slides*]\]\n
+
+- [https://arxiv.org/abs/2310.17074 Benign Oscillation of Stochastic Gradient Descent with Large Learning Rates]\n 
+*Miao Lu\**, Beining Wu\*, Xiaodong Yang, Difan Zou \n 
+/NeurIPS Workshop on Mathematics of Modern Machine Learning (M3L) 2023/ \n
+/International Conference on Learning Representations (ICLR) 2024/ \[[ArXiv_Benign_Oscillation.pdf *PDF*]\] \[[Benign_Oscillation_Poster.pdf *Poster*]\] \n
+
+- [https://arxiv.org/abs/2305.18258 Maximize to Explore: One Objective Function Fusing Estimation, Planning, and Exploration]\n 
+Zhihan Liu\*, *Miao Lu\**, Wei Xiong\*, Han Zhong, Hao Hu, Shenao Zhang, Sirui Zheng, Zhuoran Yang, Zhaoran Wang \n 
+/Neural Information Processing Systems (NeurIPS) 2023/ *Spotlight*  (short version)  \n
+/Under review in Operations Research (OR)  / (long version) \[[ArXiv_MEX.pdf *PDF*]\] \[[https://github.com/agentification/MEX *Code*]\] \[[NeurIPS2023MEX_Slides.pdf *Slides*]\]\n
+
+- [https://arxiv.org/abs/2305.09659 Double Pessimism is Provably Efficient for Distributionally Robust Offline Reinforcement Learning: Generic Algorithm and Robust Partial Coverage]\n 
+Jose Blanchet, *Miao Lu*, Tong Zhang, Han Zhong (alphabetical) \n 
+/Neural Information Processing Systems (NeurIPS) 2023/ (short version)\n
+/Major revision in Mathematics of Operations Research (MOR)  / (long version)  \[[ArXiv_Double_Pessimism.pdf *PDF*]\] \[[NeurIPS2023DoublePessimism_Slides.pdf *Slides*]\]\n
+
+- [https://arxiv.org/abs/2205.13589 Pessimism in the Face of Confounders: Provably Efficient Offline Reinforcement Learning in Partially Observable Markov Decision Processes]\n
+*Miao Lu*, Yifei Min, Zhaoran Wang, Zhuoran Yang \n
+/International Conference on Learning Representations (ICLR) 2023/  \[[ArXiv_Pessimism_Confounded_POMDP.pdf *PDF*]\] \[[informs2022.pdf *Slides*]\]\n
+
+- [https://proceedings.mlr.press/v162/liu22l.html Welfare Maximization in Competitive Equilibrium: Reinforcement Learning for Markov Exchange Economy]\n
+Zhihan Liu\*, *Miao Lu\**, Zhaoran Wang, Michael I. Jordan, Zhuoran Yang \n
+/International Conference on Machine Learning (ICML) 2022/ \[[ICML2022RLMEE.pdf *PDF*]\] \[[https://github.com/YSLIU627/RL-for-Markov-Exchange-Economy *Code*]\] \[[ICML2022RLMEE_Slides.pdf *Slides*]\]\n
+
+- [https://openreview.net/forum?id=O1DEtITim__ Learning Pruning-Friendly Networks via Frank-Wolfe: One-Shot, Any-Sparsity, and No Retraining]\n
+*Miao Lu\**, Xiaolong Luo\*, Tianlong Chen, Wuyang Chen, Dong Liu, Zhangyang Wang \n
+/International Conference on Learning Representations (ICLR) 2022/ *Spotlight* \[[ICLR2022SFWPruning.pdf *PDF*]\] \[[https://github.com/VITA-Group/SFW-Once-for-All-Pruning *Code*]\]  \[[ICLR2022SFWPruning_Slides.pdf *Slides*]\]\n 
+
+- [https://arxiv.org/abs/2112.10513 Learning Robust Policy against Disturbance in Transition Dynamics via State-Conservative Policy Optimization]\n
+Yufei Kuang, *Miao Lu*, Jie Wang, Qi Zhou, Bin Li, Houqiang Li \n
+/Association for the Advancement of Artificial Intelligence (AAAI) 2022/ \[[AAAI2022SCPO.pdf *PDF*]\] \[[https://github.com/MIRALab-USTC/RL-SCPO *Code*]\] \[[AAAI2022SCPO_Slides.pdf *Slides*]\]
+
