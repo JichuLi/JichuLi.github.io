@@ -1,78 +1,638 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<!doctype html>
+<html lang="en">
 <head>
-<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<link rel="stylesheet" href="jemdoc.css" type="text/css" />
-<title>Jichu Li (李继初)</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Jichu Li (李继初) - academic homepage">
+  <meta property="og:title" content="Jichu Li (李继初)">
+  <meta property="og:description" content="Academic homepage of Jichu Li.">
+  <meta property="og:image" content="og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Jichu Li (李继初)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&amp;display=swap" rel="stylesheet">
+  <script>
+    (() => {
+      try {
+        const savedTheme = localStorage.getItem("theme");
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const initialTheme = savedTheme === "dark" || savedTheme === "light"
+          ? savedTheme
+          : (prefersDark ? "dark" : "light");
+        document.documentElement.dataset.theme = initialTheme;
+      } catch (error) {
+        document.documentElement.dataset.theme = "light";
+      }
+    })();
+  </script>
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f1f0ed;
+      --surface: #faf9f5;
+      --ink: #272723;
+      --muted: #626159;
+      --faint: #77756c;
+      --line: #d9d7cf;
+      --accent: #4f6656;
+      --accent-strong: #33493c;
+      --accent-soft: #d7e0d9;
+      --notice: #9a3a29;        
+      --notice-soft: #f9edea;   
+      --nav-bg: rgba(241, 240, 237, .9);
+      --footer: #e7e5dd;
+      --hover: rgba(250, 249, 245, .7);
+      --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+      --sans: "Inter", "PingFang SC", "Microsoft YaHei", sans-serif;
+      --max-width: 960px;
+    }
+    :root[data-theme="dark"] {
+      color-scheme: dark;
+      --paper: #1b1b18;
+      --surface: #25241f;
+      --ink: #f0eee6;
+      --muted: #bebbb0;
+      --faint: #a39f92;
+      --line: #3e3c34;
+      --accent: #b7c8bb;
+      --accent-strong: #dce6de;
+      --accent-soft: #2c372f;
+      --notice: #9a3a29;        
+      --notice-soft: #f9edea;   
+      --nav-bg: rgba(27, 27, 24, .9);
+      --footer: #151512;
+      --hover: rgba(255, 255, 255, .04);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 70px; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font: 15px/1.7 var(--sans);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      transition: background-color .2s ease, color .2s ease;
+    }
+    a {
+      color: var(--accent);
+      text-decoration-color: var(--line);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+    a:hover { text-decoration-color: var(--accent); }
+    a:focus-visible,
+    button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+    .skip-link {
+      position: fixed;
+      z-index: 50;
+      top: 8px;
+      left: 8px;
+      padding: 6px 10px;
+      background: var(--ink);
+      color: #fff;
+      transform: translateY(-150%);
+    }
+    .skip-link:focus { transform: translateY(0); }
+
+    .nav {
+      position: sticky;
+      z-index: 20;
+      top: 0;
+      border-bottom: 1px solid var(--line);
+      background: var(--nav-bg);
+      backdrop-filter: saturate(140%) blur(18px);
+      transition: background-color .2s ease, border-color .2s ease;
+    }
+    .nav-inner {
+      width: min(var(--max-width), calc(100% - 48px));
+      min-height: 62px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .nav-name {
+      color: var(--ink);
+      font: 500 1.12rem/1 var(--serif);
+      text-decoration: none;
+    }
+    .nav-title { margin: 0; font: inherit; }
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .nav-links { display: flex; align-items: center; gap: 22px; }
+    .nav-links a {
+      border: 0;
+      color: var(--muted);
+      font-size: .86rem;
+      font-weight: 500;
+      text-decoration: none;
+    }
+    .nav-links a:hover { color: var(--accent); }
+    .theme-toggle {
+      width: 34px;
+      height: 34px;
+      flex: 0 0 34px;
+      padding: 0;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: var(--surface);
+      color: var(--accent-strong);
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      font: 400 1.08rem/1 var(--sans);
+      transition: background-color .2s ease, border-color .2s ease, color .2s ease;
+    }
+    .theme-icon { grid-area: 1 / 1; }
+    .theme-icon-moon { display: none; }
+    :root[data-theme="dark"] .theme-icon-sun { display: none; }
+    :root[data-theme="dark"] .theme-icon-moon { display: block; }
+
+    main,
+    .footer-inner {
+      width: min(var(--max-width), calc(100% - 48px));
+      margin: 0 auto;
+    }
+    section { scroll-margin-top: 68px; }
+
+    .profile {
+      padding: 66px 0 74px;
+    }
+    .profile-grid {
+      display: grid;
+      grid-template-columns: 220px minmax(0, 1fr);
+      gap: 56px;
+      align-items: start;
+    }
+    .label {
+      margin: 0 0 10px;
+      color: var(--ink);
+      font: 600 .94rem/1.35 var(--sans);
+    }
+    .profile p { margin: 0 0 16px; font-size: 1rem; }
+    .profile-copy > p,
+    .research-copy p { max-width: 65ch; }
+    .profile-copy a { font-weight: 500; }
+    .portrait {
+      width: 220px;
+      margin: 2px 0 0;
+    }
+    .portrait img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border: 1px solid var(--line);
+      box-shadow: 9px 9px 0 var(--accent-soft);
+    }
+    .research-copy {
+      margin-top: 30px;
+      padding-top: 24px;
+      border-top: 1px solid var(--line);
+    }
+    .notice {
+      margin: 26px 0 24px !important;
+      padding: 12px 16px;
+      border-left: 3px solid var(--notice);
+      background: var(--notice-soft);
+      color: var(--notice);
+      font-size: .93rem !important;
+      font-weight: 600;
+    }
+    .contact { margin-top: 24px; }
+    .contact p { margin-bottom: 8px; color: var(--muted); font-size: .92rem; }
+    .contact-links { display: flex; flex-wrap: wrap; gap: 4px 10px; }
+    .contact-links a { color: var(--ink); font-weight: 600; }
+    .contact-links a:hover { color: var(--accent); }
+
+    .content-section {
+      padding: 72px 0;
+      border-top: 1px solid var(--line);
+      display: grid;
+      grid-template-columns: 170px minmax(0, 1fr);
+      column-gap: 46px;
+      align-items: start;
+    }
+    .section-title {
+      grid-column: 1;
+      margin: 0;
+      color: var(--ink);
+      font: 500 1.68rem/1.2 var(--serif);
+    }
+    .section-title::after {
+      width: 30px;
+      height: 2px;
+      margin-top: 13px;
+      background: var(--accent);
+      display: block;
+      content: "";
+    }
+
+    .publication-list {
+      grid-column: 2;
+      border-top: 1px solid var(--line);
+    }
+    .publication {
+      padding: 19px 4px 20px;
+      border-bottom: 1px solid var(--line);
+      transition: background-color .16s ease;
+    }
+    .publication:hover { background: var(--hover); }
+    .publication h3 {
+      margin: 0 0 6px;
+      font: 600 1.04rem/1.48 var(--sans);
+    }
+    .publication h3 a { color: var(--ink); text-decoration: none; }
+    .publication h3 a:hover { color: var(--accent); }
+    .publication p { margin: 2px 0; font-size: .9rem; }
+    .authors { color: var(--muted); }
+    .authors strong { color: var(--ink); font-weight: 700; }
+    .venue { color: var(--faint); font-family: var(--serif); font-style: italic; }
+
+    .experience-group { grid-column: 2; margin-bottom: 44px; }
+    .experience-group:last-child { margin-bottom: 0; }
+    .group-title {
+      margin: 0 0 13px;
+      font: 600 1.14rem/1.35 var(--sans);
+    }
+    .experience-item {
+      padding: 16px 0 17px;
+      border-bottom: 1px solid var(--line);
+    }
+    .experience-item:first-of-type { border-top: 1px solid var(--line); }
+    .experience-head {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 20px;
+      align-items: center;
+    }
+    .organization {
+      min-width: 0;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .logo-slot {
+      width: 46px;
+      height: 46px;
+      flex: 0 0 46px;
+      display: grid;
+      place-items: center;
+      padding: 2px;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      background: #fff;
+    }
+    .logo-slot img {
+      width: 38px;
+      height: 38px;
+      object-fit: contain;
+      display: block;
+    }
+    .organization-text { line-height: 1.45; }
+    .organization-text strong { font-weight: 650; }
+    .date {
+      color: var(--faint);
+      font-size: .86rem;
+      white-space: nowrap;
+    }
+    .experience-body {
+      margin-left: 60px;
+      margin-top: 6px;
+    }
+    .experience-body ul {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: .92rem;
+    }
+    .degree-columns {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+    .award-list { border-top: 1px solid var(--line); }
+    .award-list p {
+      margin: 0;
+      padding: 11px 0;
+      border-bottom: 1px solid var(--line);
+      color: var(--muted);
+      font-size: .92rem;
+    }
+    .award-list strong { color: var(--ink); }
+    .service-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0;
+      border-top: 1px solid var(--line);
+    }
+    .service-grid > div {
+      padding: 14px 0 16px;
+      border-bottom: 1px solid var(--line);
+    }
+    .service-grid h4 {
+      margin: 0 0 7px;
+      color: var(--ink);
+      font: 600 .98rem/1.4 var(--sans);
+    }
+    .service-grid p,
+    .service-grid ul {
+      margin: 0;
+      color: var(--muted);
+      font-size: .92rem;
+    }
+    .service-grid ul { padding-left: 18px; }
+
+    footer {
+      border-top: 1px solid var(--line);
+      background: var(--footer);
+      transition: background-color .2s ease, border-color .2s ease;
+    }
+    .footer-inner {
+      padding: 30px 0 54px;
+      color: var(--faint);
+      font-size: .84rem;
+    }
+    .footer-inner p { margin: 0; }
+
+    dialog {
+      width: min(390px, calc(100% - 32px));
+      max-height: calc(100vh - 32px);
+      padding: 12px;
+      border: 0;
+      background: var(--surface);
+      box-shadow: 0 22px 70px rgba(35, 35, 31, .22);
+    }
+    dialog::backdrop { background: rgba(35, 35, 31, .72); }
+    dialog img { width: 100%; height: auto; max-height: calc(100vh - 56px); object-fit: contain; display: block; }
+    .dialog-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 36px;
+      height: 36px;
+      padding: 0;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      background: var(--surface);
+      color: var(--ink);
+      cursor: pointer;
+      font-size: 1.4rem;
+      line-height: 1;
+    }
+
+    @media (max-width: 900px) {
+      .profile-grid { grid-template-columns: 220px minmax(0, 1fr); gap: 40px; }
+      .portrait { width: 220px; }
+      .content-section { grid-template-columns: 150px minmax(0, 1fr); column-gap: 34px; }
+    }
+    @media (max-width: 760px) {
+      .content-section { display: block; }
+      .section-title { margin: 0 0 28px; }
+    }
+    @media (max-width: 680px) {
+      body { font-size: 16px; line-height: 1.65; }
+      .profile-grid { grid-template-columns: 1fr; gap: 30px; }
+      .portrait { width: 210px; margin: 0; }
+    }
+    @media (max-width: 540px) {
+      html { scroll-padding-top: 62px; }
+      .nav-inner,
+      main,
+      .footer-inner { width: calc(100% - 36px); }
+      .nav-inner {
+        min-height: 58px;
+        gap: 12px;
+      }
+      .nav-name { flex: 0 0 auto; font-size: .98rem; }
+      .nav-brand { flex: 0 0 auto; gap: 8px; }
+      .nav-links {
+        min-width: 0;
+        gap: 14px;
+        overflow-x: auto;
+        scrollbar-width: none;
+      }
+      .nav-links::-webkit-scrollbar { display: none; }
+      .profile { padding: 46px 0 52px; }
+      .content-section { padding: 52px 0; }
+      .section-title { font-size: 1.5rem; }
+      .experience-head { grid-template-columns: 1fr; gap: 5px; }
+      .date { margin-left: 60px; white-space: normal; }
+      .degree-columns { grid-template-columns: 1fr; gap: 8px; }
+      .organization { align-items: flex-start; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      body { transition: none; }
+    }
+  </style>
 </head>
 <body>
-<table summary="Table for page layout." id="tlayout">
-<tr valign="top">
-<td id="layout-menu">
-<div class="menu-category">Homepage</div>
-<div class="menu-item"><a href="index.html" class="current">About&nbsp;Me</a></div>
-<div class="menu-item"><a href="experiences.html">Experiences</a></div>
-<div class="menu-item"><a href="files/CV_Jichu.pdf">CV</a></div>
-</td>
-<td id="layout-content">
-<div id="toptitle">
-<h1>Jichu Li (李继初)</h1>
-</div>
-<table class="imgtable"><tr><td>
-<img src="images/self_photo.jpg" alt="alt text" width="262.4" height="350px" />&nbsp;</td>
-<td align="left"><p><b>About Me</b><br /></p>
-<p>Welcome to my homepage!</p>
-<p>I’m Jichu Li, currently an undergraduate student in the Honors Talent Program in Statistics and Data Science at <a href="https://www.ruc.edu.cn/">Renmin University of China</a>. I'm also a visiting student at <a href="https://www.ttic.edu/">Toyota Technological Institute at Chicago</a>, hosted by <a href="https://zhiyuanli.ttic.edu/">Prof. Zhiyuan Li</a>. 
-During my research journey, I had the fortune to work with <a href="https://difanzou.github.io/">Prof. Difan Zou</a> on learning theory at The University of Hong Kong and <a href="https://zhoufeng6288.github.io/index.html">Prof. Feng Zhou</a> on multimodal time-series modeling at Renmin University of China.</p>
-<p><b>Research Interests</b><br />
-My research interests lie at the intersection of machine learning theory and optimization. I am dedicated to building a rigorous theoretical understanding of modern optimization algorithms in deep learning, analyzing their convergence, implicit bias, and generalization. 
-At the same time, I am interested in applying these theoretical insights to the design and analysis of large language models (LLMs/MLLMs), including LLM-based approaches for modeling complex sequential and event-based data.</p>
-<p><span class="special">I am currently seeking PhD opportunities in CS/Statistics/IEOR starting 2027 Fall. Please feel free to email me if you’d like to connect!</strong></span></p>
-<p><b>Contact Information</b><br /></p>
-<p>Email: lijichu52 <a href="at">at</a> gmail <a href="dot">dot</a> com</p>
-<p>[<a href="https://scholar.google.com/citations?user=hY3QvysAAAAJ&amp;hl=en">Google Scholar</a>] [<a href="https://github.com/JichuLi">GitHub</a>] [<a href="images/WeChat.jpg">WeChat</a>] [<a href="files/CV_Jichu.pdf">CV</a>]</p>
-</td></tr></table>
-<h2>Publications (* equal contribution)</h2>
-<ul>
-<li><p><a href="https://openreview.net/forum?id=ayBfYBks0U">Learning with Synthetic Data via SGD in High-Dimensional Linear Regression</a> <br /> 
-<b>Jichu Li</b>, Difan Zou <br />
-<i>In submission</i> <br />
-<i>ICML Workshop on High-dimensional Learning Dynamics (HiLD 2026)</i><br /></p>
-</li>
-</ul>
-<ul>
-<li><p><a href="https://arxiv.org/abs/2602.11557">The Implicit Bias of Steepest Descent with Mini-batch Stochastic Gradient</a> <br /> 
-<b>Jichu Li</b>, Xuan Tang, Difan Zou <br /> 
-<i>International Conference on Machine Learning (ICML) 2026</i> <br /></p>
-</li>
-</ul>
-<ul>
-<li><p><a href="https://arxiv.org/abs/2510.21314">A Convergence Analysis of Adaptive Optimizers under Floating-point Quantization</a> <br /> 
-Xuan Tang*, <b>Jichu Li*</b>, Difan Zou <br /> 
-<i>International Conference on Learning Representations (ICLR) 2026</i> <br /></p>
-</li>
-</ul>
-<ul>
-<li><p><a href="https://arxiv.org/abs/2602.01125">Long-range Modeling and Processing of Multimodal Event Sequences</a> <br /> 
-<b>Jichu Li*</b>, Yilun Zhong*, Zhiting Li, Feng Zhou, Quyu Kong <br /> 
-<i>International Conference on Learning Representations (ICLR) 2026</i> <br /></p>
-</li>
-</ul>
-<ul>
-<li><p><a href="https://arxiv.org/abs/2505.18411">DanmakuTPPBench: A Multi-modal Benchmark for Temporal Point Process Modeling and Understanding</a><br /> 
-Yue Jiang, <b>Jichu Li</b>, Yang Liu, Dingkang Yang, Feng Zhou, Quyu Kong <br /> 
-<i>Neural Information Processing Systems (NeurIPS) 2025</i> <br /></p>
-</li>
-</ul>
-<div id="footer">
-<div id="footer-text">
-Copyright 2026 Jichu Li. Page generated 2026-07-13 02:30:03 中部夏令时.
-</div>
-</div>
-</td>
-</tr>
-</table>
+  <a class="skip-link" href="#about">Skip to content</a>
+
+  <nav class="nav" aria-label="Primary navigation">
+    <div class="nav-inner">
+      <div class="nav-brand">
+        <h1 class="nav-title"><a class="nav-name" href="#about">Jichu Li (李继初)</a></h1>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false" title="Switch to dark mode">
+          <span class="theme-icon theme-icon-sun" aria-hidden="true">&#9728;</span>
+          <span class="theme-icon theme-icon-moon" aria-hidden="true">&#9790;</span>
+        </button>
+      </div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#publications">Publications</a>
+        <a href="#experiences">Experiences</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="profile" id="about">
+      <div class="profile-grid">
+        <figure class="portrait">
+          <img src="images/self_photo.jpg" alt="Jichu Li at the International Conference on Machine Learning" width="1977" height="2637">
+        </figure>
+        <div class="profile-copy">
+          <h2 class="label">About Me</h2>
+          <p>Welcome to my homepage!</p>
+          <p>I’m Jichu Li, currently an undergraduate student in the Honors Talent Program in Statistics and Data Science at <a href="https://www.ruc.edu.cn/">Renmin University of China</a>. I'm also a visiting student at <a href="https://www.ttic.edu/">Toyota Technological Institute at Chicago</a>, hosted by <a href="https://zhiyuanli.ttic.edu/">Prof. Zhiyuan Li</a>.</p>
+          <p>During my research journey, I had the fortune to work with <a href="https://difanzou.github.io/">Prof. Difan Zou</a> on learning theory at The University of Hong Kong and <a href="https://zhoufeng6288.github.io/index.html">Prof. Feng Zhou</a> on multimodal time-series modeling at Renmin University of China.</p>
+          <div class="research-copy">
+            <h2 class="label">Research Interests</h2>
+            <p>My research interests lie at the intersection of machine learning theory and optimization. I am dedicated to building a rigorous theoretical understanding of modern optimization algorithms in deep learning, analyzing their convergence, implicit bias, and generalization.
+            At the same time, I am interested in applying these theoretical insights to the design and analysis of large language models (LLMs/MLLMs), including LLM-based approaches for modeling complex sequential and event-based data.</p>
+          </div>
+          <p class="notice">I am currently seeking PhD opportunities in CS/Statistics/IEOR starting 2027 Fall. Please feel free to email me if you’d like to connect!</p>
+          <div class="contact" id="contact">
+            <h2 class="label">Contact Information</h2>
+            <p>Email: lijichu52 at gmail dot com</p>
+            <p class="contact-links">[<a href="https://scholar.google.com/citations?user=hY3QvysAAAAJ&amp;hl=en">Google Scholar</a>] [<a href="https://github.com/JichuLi">GitHub</a>] [<a href="images/WeChat.jpg" id="wechat-link">WeChat</a>] [<a href="files/CV_Jichu.pdf">CV</a>]</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section" id="publications">
+      <h2 class="section-title">Publications (* equal contribution)</h2>
+      <div class="publication-list">
+        <article class="publication">
+          <h3><a href="https://openreview.net/forum?id=ayBfYBks0U">Learning with Synthetic Data via SGD in High-Dimensional Linear Regression</a></h3>
+          <p class="authors"><strong>Jichu Li</strong>, Difan Zou</p>
+          <p class="venue">In submission</p>
+          <p class="venue">ICML Workshop on High-dimensional Learning Dynamics (HiLD 2026)</p>
+        </article>
+        <article class="publication">
+          <h3><a href="https://arxiv.org/abs/2602.11557">The Implicit Bias of Steepest Descent with Mini-batch Stochastic Gradient</a></h3>
+          <p class="authors"><strong>Jichu Li</strong>, Xuan Tang, Difan Zou</p>
+          <p class="venue">International Conference on Machine Learning (ICML) 2026</p>
+        </article>
+        <article class="publication">
+          <h3><a href="https://arxiv.org/abs/2510.21314">A Convergence Analysis of Adaptive Optimizers under Floating-point Quantization</a></h3>
+          <p class="authors">Xuan Tang*, <strong>Jichu Li*</strong>, Difan Zou</p>
+          <p class="venue">International Conference on Learning Representations (ICLR) 2026</p>
+        </article>
+        <article class="publication">
+          <h3><a href="https://arxiv.org/abs/2602.01125">Long-range Modeling and Processing of Multimodal Event Sequences</a></h3>
+          <p class="authors"><strong>Jichu Li*</strong>, Yilun Zhong*, Zhiting Li, Feng Zhou, Quyu Kong</p>
+          <p class="venue">International Conference on Learning Representations (ICLR) 2026</p>
+        </article>
+        <article class="publication">
+          <h3><a href="https://arxiv.org/abs/2505.18411">DanmakuTPPBench: A Multi-modal Benchmark for Temporal Point Process Modeling and Understanding</a></h3>
+          <p class="authors">Yue Jiang, <strong>Jichu Li</strong>, Yang Liu, Dingkang Yang, Feng Zhou, Quyu Kong</p>
+          <p class="venue">Neural Information Processing Systems (NeurIPS) 2025</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section" id="experiences">
+      <h2 class="section-title">Experiences</h2>
+
+      <div class="experience-group">
+        <h3 class="group-title">Education</h3>
+        <article class="experience-item">
+          <div class="experience-head">
+            <div class="organization">
+              <span class="logo-slot"><img src="logos/ruc-red.png" alt="" width="105" height="105"></span>
+              <div class="organization-text"><strong>Renmin University of China</strong>, Beijing, China.</div>
+            </div>
+            <em class="date">Sep. 2023 - Jun. 2027 (expected)</em>
+          </div>
+          <div class="experience-body degree-columns">
+            <ul><li>B.S. in Statistics (GPA: 3.98/4.00, Ranking: 2/160+)</li><li>School of Statistics</li></ul>
+            <ul><li>B.Econ.(Minor) in Fintech</li><li>Gaoli Academy, Gaoling School of Artificial Intelligence</li></ul>
+          </div>
+        </article>
+      </div>
+
+      <div class="experience-group">
+        <h3 class="group-title">Research Visiting Experiences</h3>
+        <article class="experience-item">
+          <div class="experience-head">
+            <div class="organization">
+              <span class="logo-slot"><img src="logos/ttic-square.jpg" alt="" width="299" height="299"></span>
+              <div class="organization-text"><strong>Toyota Technological Institute at Chicago</strong>, Chicago, USA.</div>
+            </div>
+            <em class="date">July. 2026 - Sep. 2026</em>
+          </div>
+          <div class="experience-body"><ul><li>Visiting student hosted by Prof. Zhiyuan Li (on-site)</li></ul></div>
+        </article>
+        <article class="experience-item">
+          <div class="experience-head">
+            <div class="organization">
+              <span class="logo-slot"><img src="logos/hku-crest.png" alt="" width="1175" height="1327"></span>
+              <div class="organization-text"><strong>The University of Hong Kong</strong>, Hong Kong SAR, China.</div>
+            </div>
+            <em class="date">July. 2025 - Sep. 2025</em>
+          </div>
+          <div class="experience-body"><ul><li>Research intern hosted by Prof. Difan Zou (on-site)</li></ul></div>
+        </article>
+      </div>
+
+      <div class="experience-group">
+        <h3 class="group-title">Awards and Honors</h3>
+        <div class="award-list">
+          <p>(Sep. 2024&amp;2025) National Scholarship. (Twice) (Highest scholarship from the Ministry of Education of China. ￥20000)</p>
+          <p>(Jul. 2025) HKU Summer Research Stipend. (The University of Hong Kong. HK$ 19600)</p>
+          <p>(May. 2025) Honorable Mention. (Mathematical Contest in Modeling and Interdisciplinary Contest in Modeling)</p>
+          <p>(Dec. 2024) Provincial First Prize. (Mathematics competition of Chinese College Students, CMC)</p>
+          <p>(Nov. 2024) Provincial First Prize. (Contemporary Undergraduate Mathematical Contest in Modeling)</p>
+        </div>
+      </div>
+
+      <div class="experience-group">
+        <h3 class="group-title">Professional Services</h3>
+        <div class="service-grid">
+          <div>
+            <h4>Conference reviewer</h4>
+            <p>Neural Information Processing Systems (NeurIPS; 2026)<br>
+            International Conference on Machine Learning (ICML; 2026)</p>
+          </div>
+          <div>
+            <h4>Teaching Assistant</h4>
+            <p>Optimization Methods, Fall 2026.</p>
+          </div>
+          <div>
+            <h4>Instructor</h4>
+            <p>Statistical Investigation Association of Renmin University of China (2024-now)</p>
+            <ul><li>Taught Python programming and wrote tutorial articles for student groups at Renmin University of China.</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="footer-inner"><p>Copyright 2026 Jichu Li.</p></div></footer>
+
+  <dialog id="wechat-dialog" aria-label="WeChat">
+    <button class="dialog-close" type="button" aria-label="Close" title="Close">&times;</button>
+    <img src="images/WeChat.jpg" alt="WeChat QR code" width="972" height="1444">
+  </dialog>
+
+  <script>
+    const root = document.documentElement;
+    const themeToggle = document.getElementById("theme-toggle");
+
+    function syncThemeToggle() {
+      const darkMode = root.dataset.theme === "dark";
+      const label = darkMode ? "Switch to light mode" : "Switch to dark mode";
+      themeToggle.setAttribute("aria-label", label);
+      themeToggle.setAttribute("aria-pressed", String(darkMode));
+      themeToggle.setAttribute("title", label);
+    }
+
+    themeToggle.addEventListener("click", () => {
+      root.dataset.theme = root.dataset.theme === "dark" ? "light" : "dark";
+      try {
+        localStorage.setItem("theme", root.dataset.theme);
+      } catch (error) {
+        // The selected theme still applies for this page view.
+      }
+      syncThemeToggle();
+    });
+    syncThemeToggle();
+
+    const wechatLink = document.getElementById("wechat-link");
+    const wechatDialog = document.getElementById("wechat-dialog");
+    const closeButton = wechatDialog.querySelector(".dialog-close");
+
+    wechatLink.addEventListener("click", (event) => {
+      if (typeof wechatDialog.showModal !== "function") return;
+      event.preventDefault();
+      wechatDialog.showModal();
+    });
+
+    closeButton.addEventListener("click", () => wechatDialog.close());
+    wechatDialog.addEventListener("click", (event) => {
+      if (event.target === wechatDialog) wechatDialog.close();
+    });
+  </script>
 </body>
 </html>
