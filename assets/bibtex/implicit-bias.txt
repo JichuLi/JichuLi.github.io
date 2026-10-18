@@ -1,0 +1,7 @@
+@inproceedings{li2026implicit,
+  title = {The Implicit Bias of Steepest Descent with Mini-batch Stochastic Gradient},
+  author = {Li, Jichu and Tang, Xuan and Zou, Difan},
+  booktitle = {International Conference on Machine Learning},
+  year = {2026},
+  url = {https://arxiv.org/abs/2602.11557}
+}

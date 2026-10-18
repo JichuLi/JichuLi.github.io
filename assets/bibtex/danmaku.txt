@@ -1,0 +1,7 @@
+@inproceedings{jiang2025danmakutppbench,
+  title = {{DanmakuTPPBench}: A Multi-modal Benchmark for Temporal Point Process Modeling and Understanding},
+  author = {Jiang, Yue and Li, Jichu and Liu, Yang and Yang, Dingkang and Zhou, Feng and Kong, Quyu},
+  booktitle = {Advances in Neural Information Processing Systems},
+  year = {2025},
+  url = {https://arxiv.org/abs/2505.18411}
+}

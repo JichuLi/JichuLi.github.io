@@ -1,0 +1,15 @@
+Academicons 1.8.6
+Author: James Walsh
+Project: https://github.com/jpswalsh/academicons/tree/v1.8.6
+Source of license notice: https://github.com/jpswalsh/academicons/blob/v1.8.6/README.md
+
+The Academicons font is licensed under the SIL OFL 1.1:
+https://openfontlicense.org/open-font-license-official-text/
+
+Academicons CSS, LESS, and SASS files are licensed under the MIT License:
+https://opensource.org/license/mit/
+
+The Academicons documentation is licensed under the CC BY 3.0 License:
+https://creativecommons.org/licenses/by/3.0/
+
+The original font files and stylesheet are included without modification.

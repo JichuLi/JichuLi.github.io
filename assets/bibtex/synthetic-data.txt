@@ -1,0 +1,7 @@
+@inproceedings{li2026learning,
+  title = {Learning with Synthetic Data via {SGD} in High-Dimensional Linear Regression},
+  author = {Li, Jichu and Zou, Difan},
+  booktitle = {Advances in Neural Information Processing Systems},
+  year = {2026},
+  url = {https://arxiv.org/abs/2609.09572}
+}
